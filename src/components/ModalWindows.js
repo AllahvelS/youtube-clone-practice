@@ -1,6 +1,6 @@
-import { useState } from 'react';
+// import "./ModalWindow.css"
 
-export default function SearchBar() {
+export const ModalWindow = () =>{
     const [inputSearch, setInputSearch] = useState("") 
 
     let handleSearch = () =>{

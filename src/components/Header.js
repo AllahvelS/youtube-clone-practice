@@ -1,17 +1,11 @@
-import { Link } from "react-router-dom"
+import React from "react";
+import Nav from "../Components/Nav";
+
 
 export default function Header() {
     return (
         <div>
-            <h2>Youtube</h2>
-            <ul>
-                <li>
-                    Home
-                </li>
-                <li>
-                    About
-                </li>
-            </ul>
+            <Nav />
         </div>
-    )
+    );
 }

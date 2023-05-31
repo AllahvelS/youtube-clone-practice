@@ -4,27 +4,28 @@ import { useState } from 'react';
 
 
 //Components
-import Header from './components/Header';
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import SearchBar from "./components/Searchbar";
+import Header from './Components/Header';
+import Home from './Components/Home'
+import About from './Components/About'
 
 //Css
 import './App.css';
 
-
-
-
-
-
-
-
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
-  )
+    <Router>
+      <div>
+        <Header />
+        {/* Define your routes using the Routes component */}
+        <Routes>
+          {/* Define individual routes using the Route component */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
+
 
 export default App;

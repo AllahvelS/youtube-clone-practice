@@ -1,0 +1,26 @@
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 500px; /* Adjust the width as needed */
+    margin-top: 30px;
+}
+
+.search-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.search-button i {
+    vertical-align: middle;
+}

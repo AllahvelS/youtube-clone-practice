@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Header from './Components/Header';
 import Home from './Components/Home'
 import About from './Components/About'
+import SearchBar from './Components/Searchbar';
 
 //Css
 import './App.css';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
+      <SearchBar />
     </Router>
   );
 }

@@ -96,11 +96,3 @@ export default App;
 
 
 
-
-function App() {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
-}

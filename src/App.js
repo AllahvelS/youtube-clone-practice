@@ -23,37 +23,29 @@ import { useState } from 'react';
 
 //Components
 import Header from './components/Header';
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import SearchBar from "./components/Searchbar";
+import Home from './components/Home'
+import About from './components/About'
+import SearchBar from './components/Searchbar';
 
 //Css
 import './App.css';
 
-
-
-
-
-
-
-
 function App() {
-  // const [inputSearch, setInputSearch] = useState("") 
-  
-  
   return (
-    <div>
-      <Header />
-      {/* <input 
-        onChange={event => setInputSearch(event.target.value)}
-        value = {inputSearch}
-        placeholder="Search Video" //find something else for this one
-        type = "text"
-        /> */}
-
-      <SearchBar />  
-    </div>
-  )
+    <Router>
+      <div>
+        <Header />
+        {/* Define your routes using the Routes component */}
+        <Routes>
+          {/* Define individual routes using the Route component */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+      <SearchBar />
+    </Router>
+  );
 }
+
 
 export default App;

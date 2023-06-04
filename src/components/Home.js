@@ -1,18 +1,16 @@
-import React from "react";
 
-const Home = () => {
+
+
+import React, { useState } from "react";
+import SearchBar from './SearchBar';
+
+const Home = ({ setVideos }) => {
   return (
     <div>
-      {/* <h2>Welcome to our YouTube clone!</h2>
-      <p>This is the homepage. Use the search bar to find your favorite videos.</p> */}
+      <SearchBar setVideos={setVideos} />
     </div>
   );
 };
 
 export default Home;
-
-
-
-
-
 

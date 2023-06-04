@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom';
 import './VideoCard.css'; 
 
 const VideoCard = ({ video }) => {
+
+    const videoId = video.id.videoId;
+    const videoTitle = video.snippet.title;
+
+
     return (
-        <div className="video-card">
-            <img src={video.snippet.thumbnails.default.url} alt={video.snippet.title} />
-            <h4>{video.snippet.title}</h4>
-            <Link to={`/videos/${video.id.videoId}`}>Watch Video</Link>
-        </div>
+        <Link to={`/videos/${videoId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="video-card">
+                <img src={video.snippet.thumbnails.medium.url} alt={videoTitle} />
+                <h4>{videoTitle}</h4>
+            </div>
+        </Link>
     );
 }
 

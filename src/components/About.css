@@ -1,0 +1,36 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px; /* Gap between grid items */
+  }
+  
+  
+  .grid-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .grid-container h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .grid-container p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .grid-container .box {
+    border: 1px solid #ccc; /* Border style for each paragraph box */
+    padding: 10px; /* Padding within each paragraph box */
+    border-radius: 5px; /* Rounded corners for each paragraph box */
+  }
+
+  .grid-container .box .fun-text {
+    background: linear-gradient(to right, #ffcc00, #ff3333, #ff6699); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 150%;
+  }

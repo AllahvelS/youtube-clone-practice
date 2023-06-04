@@ -13,8 +13,7 @@
 //   console.log(data)
 // })
 
-
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { useState } from 'react';
 
@@ -39,7 +38,7 @@ import './App.css';
 
 
 function App() {
-  const [inputSearch, setInputSearch] = useState("") 
+  // const [inputSearch, setInputSearch] = useState("") 
   
   
   return (

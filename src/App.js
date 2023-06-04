@@ -1,74 +1,41 @@
-// import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-
-// import { useState } from 'react';
 
 
-// //Components
-// import Header from './Components/Header';
-// import Home from './Components/Home'
-// import About from './Components/About'
-// import SearchBar from './Components/Searchbar';
 
-// //Css
-// import './App.css';
-
-// function App() {
-//   return (
-//     <Router>
-//       <div>
-//         <Header />
-//         {/* Define your routes using the Routes component */}
-//         <Routes>
-//           {/* Define individual routes using the Route component */}
-//           <Route path="/" element={<Home />} />
-//           <Route path="/about" element={<About />} />
-//         </Routes>
-//       </div>
-//       <SearchBar />
-//     </Router>
-//   );
-// }
-
-
-// export default App;
-
-
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { useState } from 'react';
 
 // Components
-import Header from './components/Header'  ;
+import Header from './components/Header';
 import Home from  './components/Home';
 import About from './components/About';
-import SearchBar from './components/Searchbar';
-import Videos from './components/Videos';  // Import Videos component
+import SearchBar from './components/SearchBar';
+import Videos from './components/Videos';  // Rename this to 'SearchResults' if you wish
+import VideoPlayer from './components/VideoPlayer'; 
 
 // Css
 import './App.css';
 
 function App() {
-  const [videos, setVideos] = useState([]);  // Declare a videos state
+  const [videos, setVideos] = useState([]);
 
   return (
     <Router>
       <div>
         <Header />
-        {/* Define your routes using the Routes component */}
+        <SearchBar setVideos={setVideos} />
         <Routes>
-          {/* Define individual routes using the Route component */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/search" element={<Videos videos={videos} />} />  // Added this line
+          <Route path="/videos/:videoId" element={<VideoPlayer />} /> 
         </Routes>
-        {/* Pass the setVideos function to the SearchBar component */}
-        <SearchBar setVideos={setVideos} />
-        {/* Render the Videos component passing the videos state */}
-        <Videos videos={videos} />
       </div>
     </Router>
   );
 }
 
 export default App;
+
 
 
 

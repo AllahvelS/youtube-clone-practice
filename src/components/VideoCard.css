@@ -1,0 +1,25 @@
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 250px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin: 20px;
+  }
+  
+  .video-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .video-card h4 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+
+  
+  

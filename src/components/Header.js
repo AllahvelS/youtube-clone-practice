@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../Components/Nav";
+import Nav from "./Nav";
 
 
 export default function Header() {
@@ -9,3 +9,5 @@ export default function Header() {
         </div>
     );
 }
+
+

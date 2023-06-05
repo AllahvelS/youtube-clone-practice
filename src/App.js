@@ -1,60 +1,60 @@
-// let api_key = 'AIzaSyAXWfFA6F3wHvBhRPrUt_6ZZs-bC4owfxk'
-// let video_http = "https://www.googleapis.com/youtube/v3/videos?"
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// fetch(video_http + new URLSearchParams({
-//   key: api_key,
-//   part: 'snippet',
-//   chart: 'mostPopular',
-//   maxResult: 1,
-//   regionCode: 'IN'
-// }))
-// .then(response => response.json())
-// .then(data =>{
-//   console.log(data)
-// })
-
-
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-
-import { useState } from 'react';
-
-
-
-
-
-//Components
 import Header from './components/Header';
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import SearchBar from "./components/Searchbar";
+import Home from  './components/Home';
+import About from './components/About';
+import Videos from './components/Videos';
+import VideoPlayer from './components/VideoPlayer'; 
 
-//Css
 import './App.css';
 
-
-
-
-
-
-
-
 function App() {
-  const [inputSearch, setInputSearch] = useState("") 
-  
-  
-  return (
-    <div>
-      <Header />
-      {/* <input 
-        onChange={event => setInputSearch(event.target.value)}
-        value = {inputSearch}
-        placeholder="Search Video" //find something else for this one
-        type = "text"
-        /> */}
+  const [videos, setVideos] = useState([]);
 
-      <SearchBar />  
-    </div>
-  )
+  return (
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home setVideos={setVideos} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/search" element={<Videos videos={videos} setVideos={setVideos} />} /> 
+          <Route path="/videos/:videoId" element={<VideoPlayer />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

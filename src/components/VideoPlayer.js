@@ -10,7 +10,6 @@ const VideoPlayer = () => {
   const [username, setUsername] = useState('');
 
   useEffect(() => {
-    // Optionally, fetch additional video details from YouTube API here
     setLoading(false);
   }, [videoId]);
 

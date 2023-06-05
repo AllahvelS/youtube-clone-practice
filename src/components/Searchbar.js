@@ -1,16 +1,11 @@
-
-
-
-
 import { useState } from "react";
 import "./Searchbar.css"
 import { useNavigate } from 'react-router-dom'; 
 
 export const SearchBar = ({ setVideos, videos, disableMessage }) => {
     const [searchTerm, setSearchTerm] = useState("");
-    const [maxResults, setMaxResults] = useState(10); // Default to 10 results
-    const navigate = useNavigate(); // use useNavigate instead of useHistory
-
+    const [maxResults, setMaxResults] = useState(10); 
+    const navigate = useNavigate(); 
 
     let handleSearch = (event) => {
         event.preventDefault();
@@ -21,7 +16,7 @@ export const SearchBar = ({ setVideos, videos, disableMessage }) => {
             console.log("Response:");
             console.log(response.items);
             setVideos(response.items);
-            navigate("/search"); // use navigate instead of history.push
+            navigate("/search"); 
 
         });
     };

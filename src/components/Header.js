@@ -1,5 +1,7 @@
 import React from "react";
-import Nav from "/Users/fsmathias/Desktop/M3_Projects/youtube-clone-practice/src/components/Nav.js"
+
+import Nav from "./Nav";
+
 
 
 export default function Header() {
@@ -9,3 +11,8 @@ export default function Header() {
         </div>
     );
 }
+
+
+
+
+

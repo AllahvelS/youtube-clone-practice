@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./Searchbar.css"
 import { useNavigate } from 'react-router-dom'; 
 
-export const SearchBar = ({ setVideos, videos, disableMessage }) => {
-    //export const SearchBar = ({ setVideos, videos, disableMessage, setIsModalOpen }) => {
+export const Searchbar = ({ setVideos, videos, disableMessage }) => {
+    //export const Searchbar = ({ setVideos, videos, disableMessage, setIsModalOpen }) => {
  
     const [searchTerm, setSearchTerm] = useState("");
     const [maxResults, setMaxResults] = useState(10); 
@@ -59,4 +59,4 @@ export const SearchBar = ({ setVideos, videos, disableMessage }) => {
     );
 };
 
-export default SearchBar;
+export default Searchbar;

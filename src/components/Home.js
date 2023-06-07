@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import SearchBar from './SearchBar';
+import Searchbar from './Searchbar';
 
 const Home = ({ setVideos }) => {
   return (
     <div>
-      <SearchBar setVideos={setVideos} />
+      <Searchbar setVideos={setVideos} />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import About from './components/About';
 import Videos from './components/Videos';
 import VideoPlayer from './components/VideoPlayer'; 
 import ModalWindow from './components/ModalWindow';
-//import SearchBar from './components/SearchBar';
+//import Searchbar from './components/Searchbar';
 
 
 import './App.css';
@@ -33,7 +33,7 @@ function App() {
 
           <Route path="/videos/:videoId" element={<VideoPlayer />} />
         </Routes>
-        {/* <SearchBar setVideos={setVideos} setIsModalOpen={setIsModalOpen} /> */}
+        {/* <Searchbar setVideos={setVideos} setIsModalOpen={setIsModalOpen} /> */}
 
         {isModalOpen && <ModalWindow onClose={() => setIsModalOpen(false)} />}
       </div>

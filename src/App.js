@@ -1,33 +1,40 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { useState } from 'react';
-
-
-//Components
 import Header from './Components/Header';
-import Home from './Components/Home'
-import About from './Components/About'
-import SearchBar from './Components/Searchbar';
+import Home from  './Components/Home';
+import About from './Components/About';
+import Videos from './Components/Videos';
+import VideoPlayer from './Components/VideoPlayer'; 
+import ModalWindow from './Components/ModalWindow';
 
-//Css
+
 import './App.css';
 
 function App() {
+  const [videos, setVideos] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
   return (
     <Router>
       <div>
         <Header />
-        {/* Define your routes using the Routes component */}
+        <button className="open-modal-btn" onClick={() => setIsModalOpen(true)}>Open Modal</button>
+
+
         <Routes>
-          {/* Define individual routes using the Route component */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setVideos={setVideos} />} />
           <Route path="/about" element={<About />} />
+          <Route path="/search" element={<Videos videos={videos} setVideos={setVideos} />} /> 
+
+          <Route path="/videos/:videoId" element={<VideoPlayer />} />
         </Routes>
+
+        {isModalOpen && <ModalWindow onClose={() => setIsModalOpen(false)} />}
       </div>
-      <SearchBar />
     </Router>
   );
 }
-
 
 export default App;

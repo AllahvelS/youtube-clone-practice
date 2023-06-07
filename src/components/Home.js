@@ -1,11 +1,12 @@
-import React from "react";
-import VideoCard from "./VideoCard";
+import React, { useState } from "react";
+import SearchBar from './SearchBar';
 
-export default function Home(){
+const Home = ({ setVideos }) => {
   return (
     <div>
-      <VideoCard />
+      <SearchBar setVideos={setVideos} />
     </div>
   );
 };
 
+export default Home;

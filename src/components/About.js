@@ -26,7 +26,7 @@ const About = () => {
 
       <p className="box">
       <h3>Sabri</h3>
-        "Hi everyone. My name is Sabri Mohiuddin. I am from Bangladesh. I moved
+        Hi everyone. My name is Sabri Mohiuddin. I am from Bangladesh. I moved
         to America about 10 years ago with my family. Even though my background
         is not in the tech field, I have recently started my journey to become
         a full-stack software engineer. My hobbies include fish keeping, gaining
@@ -35,13 +35,13 @@ const About = () => {
         <a href="https://github.com/sabrimohiuddin">
           https://github.com/sabrimohiuddin
         </a>
-        ."
       </p>
 
       <p className="box">
       <h3>Abel</h3>
         My name is Abel Vargas. I'm passionate about tabletop gaming and
-        theatre. I'm currently training to be a software engineer.
+        theatre. I'm currently training to be a software engineer. My GitHub profile link: {" "} 
+        <a href="https://github.com/salvagebar">https://github.com/salvagebar</a>
       </p>
 
       <p className="box">
